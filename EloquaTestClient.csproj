@@ -137,31 +137,31 @@
     <None Include="Service References\EloquaServiceNew\EloquaTestClient.EloquaServiceNew.UpdateResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service.xsd">
+    <None Include="Service References\EloquaServiceNew\service9.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service1.xsd">
+    <None Include="Service References\EloquaServiceNew\service91.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service2.xsd">
+    <None Include="Service References\EloquaServiceNew\service92.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service3.xsd">
+    <None Include="Service References\EloquaServiceNew\service93.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service4.xsd">
+    <None Include="Service References\EloquaServiceNew\service94.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service5.xsd">
+    <None Include="Service References\EloquaServiceNew\service95.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service6.xsd">
+    <None Include="Service References\EloquaServiceNew\service96.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service7.xsd">
+    <None Include="Service References\EloquaServiceNew\service97.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EloquaServiceNew\Service8.xsd">
+    <None Include="Service References\EloquaServiceNew\service98.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

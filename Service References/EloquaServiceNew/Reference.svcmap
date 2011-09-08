@@ -21,16 +21,16 @@
     <MetadataSource Address="https://secure.eloqua.com/API/1.2/Service.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="d5755177-5e2a-4575-8afe-a3a431df99ff" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="6f952ec7-766e-403c-b26f-3ebc1db60a5f" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="a8c6447e-d988-4048-933f-70307af39306" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd4" />
-    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="cd68644f-b966-4d01-b7d6-b3376537e04c" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd5" />
-    <MetadataFile FileName="Service4.xsd" MetadataType="Schema" ID="3e0b11b1-55d9-4839-b40d-d89e5ede02cd" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd6" />
-    <MetadataFile FileName="Service5.xsd" MetadataType="Schema" ID="af15888b-f3b9-42e0-85a0-bea3c504d5c6" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd7" />
+    <MetadataFile FileName="service9.xsd" MetadataType="Schema" ID="aacb7169-d636-490c-b6db-56960379a224" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd1" />
+    <MetadataFile FileName="service91.xsd" MetadataType="Schema" ID="2b8a72eb-73a5-4bb1-a07a-1be9aa1ef2c1" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd0" />
     <MetadataFile FileName="Eloqua.wsdl" MetadataType="Wsdl" ID="f65aceb2-3519-4cce-933b-caae4f789b00" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?wsdl" />
-    <MetadataFile FileName="Service6.xsd" MetadataType="Schema" ID="b281b567-5cfc-46a0-967e-40b36c78d176" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd8" />
-    <MetadataFile FileName="Service7.xsd" MetadataType="Schema" ID="220da927-a11e-43e5-adfd-5cc5ceaae169" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service8.xsd" MetadataType="Schema" ID="39e38e3b-ac56-4af7-948b-e031289e3478" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="service92.xsd" MetadataType="Schema" ID="8c86486d-3bb8-469c-a7ae-caaac9eb93dd" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd2" />
+    <MetadataFile FileName="service93.xsd" MetadataType="Schema" ID="85d783ea-7af9-4891-ac96-8174facd4865" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd3" />
+    <MetadataFile FileName="service94.xsd" MetadataType="Schema" ID="12ddbda2-b147-428a-b4c2-ae146a16c7b6" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd4" />
+    <MetadataFile FileName="service95.xsd" MetadataType="Schema" ID="624be9ec-a0d0-468e-8126-c78330f9afdf" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd5" />
+    <MetadataFile FileName="service96.xsd" MetadataType="Schema" ID="3c82dbc4-52db-46ba-9202-a9d086c2a867" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd6" />
+    <MetadataFile FileName="service97.xsd" MetadataType="Schema" ID="b3200b0d-04ab-4d7d-964f-6c1b6852b004" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd7" />
+    <MetadataFile FileName="service98.xsd" MetadataType="Schema" ID="adc0ce73-1320-4b38-93fd-e2cc076cb56c" SourceId="1" SourceUrl="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd8" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

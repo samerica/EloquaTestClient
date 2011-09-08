@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="https://secure.eloqua.com/API/1.2" elementFormDefault="qualified" targetNamespace="https://secure.eloqua.com/API/1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EloquaNet" />
-  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" />
-  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI" />
-  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EloquaNet" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" />
   <xs:element name="ListEntityTypes">
     <xs:complexType>
       <xs:sequence />

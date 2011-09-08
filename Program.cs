@@ -9,36 +9,6 @@ namespace EloquaTestClient
 {
     class Program
     {
-        public class EloquaInstance
-        {
-
-
-            public EloquaServiceNew.EloquaServiceClient serviceProxy;
-            public EloquaProgramService.ExternalActionServiceClient programServiceProxy;
-            public DateTime dttLastEloquaAPICall;
-            public string strInstanceName;
-            public string strUserID;
-            public string strUserPassword;
-
-
-            public EloquaInstance(string InstanceName, string UserID, string UserPassword)
-            {
-
-                strInstanceName = InstanceName;
-                strUserID = UserID;
-                strUserPassword = UserPassword;
-                serviceProxy = new EloquaServiceNew.EloquaServiceClient();
-                serviceProxy.ClientCredentials.UserName.UserName = strInstanceName + "\\" + strUserID;
-                serviceProxy.ClientCredentials.UserName.Password = strUserPassword;
-                programServiceProxy = new EloquaProgramService.ExternalActionServiceClient();
-                programServiceProxy.ClientCredentials.UserName.UserName = strInstanceName + "\\" + strUserID;
-                programServiceProxy.ClientCredentials.UserName.Password = strUserPassword;
-
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                dttLastEloquaAPICall = DateTime.Now.ToUniversalTime().Subtract(TimeSpan.FromMilliseconds(1000));
-          }
-        }
-
         static void Main()
         {
             bool success = false;
@@ -49,7 +19,11 @@ namespace EloquaTestClient
             {
                 #region Setup the Eloqua service
 
-                var service = new EloquaInstance("TestInstance", @"Webtrends\eloqua.api", "fyG9e1opgc!");
+                //var service = new EloquaInstance("TestInstance", "Webtrends\\eloqua.api", "fyG9e1opgc!");
+
+                EloquaServiceClient service = new EloquaServiceClient();
+                service.ClientCredentials.UserName.UserName = @"Webtrends\eloqua.api";
+                service.ClientCredentials.UserName.Password = "fyG9e1opgc!";
 
                 #endregion
 
@@ -82,7 +56,7 @@ namespace EloquaTestClient
 
 
                 // Execute the request
-                var result = service.serviceProxy.Create(dynamicEntities);
+                var result = service.Create(dynamicEntities);
 
 
                 // Verify the status of each Contact Create request in the results
@@ -117,11 +91,8 @@ namespace EloquaTestClient
                     // Set the ID of the Contact Entity
                     contactIDs[0] = contactId;
 
-
-
                     // Create a new list containing the fields you want populated
                     List<string> fieldList = new List<string>();
-
 
                     // Add the Contact’s Email Address to the field list
                     fieldList.Add("C_EmailAddress");
@@ -130,22 +101,20 @@ namespace EloquaTestClient
                     // Add the Contact’s First Name to the field list
                     fieldList.Add("C_FirstName");
 
-
                     // Build a Dynamic Entity array to store the results
                     DynamicEntity[] retrievedEntities;
-
 
                     // If the field list is empty - the request will return all Entity Fields
                     // Otherwise, only fields defined in the field list are returned
                     if (fieldList.Count == 0)
                     {
                         // Execute the request and return all of the Entity's fields
-                        retrievedEntities = service.serviceProxy.Retrieve(entityType, contactIDs, null);
+                        retrievedEntities = service.Retrieve(entityType, contactIDs, null);
                     }
                     else
                     {
                         // Execute the request and return only the selected Entity fields
-                        retrievedEntities = service.serviceProxy.Retrieve(entityType, contactIDs, fieldList.ToArray());
+                        retrievedEntities = service.Retrieve(entityType, contactIDs, fieldList.ToArray());
                     }
 
                     // If a result was found, extract the field values for each Dynamic Entity

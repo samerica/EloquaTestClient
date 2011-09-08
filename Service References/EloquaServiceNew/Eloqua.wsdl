@@ -47,15 +47,15 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="https://secure.eloqua.com/API/1.2/Imports">
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd0" namespace="https://secure.eloqua.com/API/1.2" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd3" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EloquaNet" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI" />
-      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd0" namespace="https://secure.eloqua.com/API/1.2" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd3" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EloquaNet" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI" />
+      <xsd:import schemaLocation="https://secure.eloqua.com/API/1.2/service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="EloquaService_ListEntityTypes_InputMessage">
@@ -1122,7 +1122,7 @@
   </wsdl:binding>
   <wsdl:service name="Eloqua">
     <wsdl:port name="EloquaService" binding="tns:EloquaService">
-      <soap:address location="https://secure.eloqua.com/API/1.2/Service.svc" />
+      <soap:address location="https://secure.eloqua.com/API/1.2/service.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
