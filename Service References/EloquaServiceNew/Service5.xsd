@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EloquaAPI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EloquaAPI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AssetFieldDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="DateTime" />
+      <xs:enumeration value="Boolean" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AssetFieldDataType" nillable="true" type="tns:AssetFieldDataType" />
+  <xs:simpleType name="ActivityFieldDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="DateTime" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActivityFieldDataType" nillable="true" type="tns:ActivityFieldDataType" />
+  <xs:simpleType name="EloquaAssetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DataExport" />
+      <xs:enumeration value="DataImport" />
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="EmailHeader" />
+      <xs:enumeration value="EmailFooter" />
+      <xs:enumeration value="ContactGroup" />
+      <xs:enumeration value="CompanyGroup" />
+      <xs:enumeration value="ProspectGroup" />
+      <xs:enumeration value="Form" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EloquaAssetType" nillable="true" type="tns:EloquaAssetType" />
+  <xs:simpleType name="SendEmailStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="Queued" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SendEmailStatus" nillable="true" type="tns:SendEmailStatus" />
+</xs:schema>

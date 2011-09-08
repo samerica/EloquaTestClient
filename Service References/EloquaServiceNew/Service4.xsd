@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ErrorCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnexpectedException" />
+      <xs:enumeration value="UnexpectedDataException" />
+      <xs:enumeration value="UnauthorizedAction" />
+      <xs:enumeration value="DuplicateValue" />
+      <xs:enumeration value="ValidationIssue" />
+      <xs:enumeration value="InvalidDataType" />
+      <xs:enumeration value="RequiredFieldNotSpecified" />
+      <xs:enumeration value="MaximumLengthExceeded" />
+      <xs:enumeration value="ItemNotFound" />
+      <xs:enumeration value="ReadOnlyField" />
+      <xs:enumeration value="InvalidField" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ErrorCode" nillable="true" type="tns:ErrorCode" />
+</xs:schema>

@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://secure.eloqua.com/API/1.2" elementFormDefault="qualified" targetNamespace="https://secure.eloqua.com/API/1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EloquaNet" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/EloquaAPI" />
+  <xs:import schemaLocation="https://secure.eloqua.com/API/1.2/Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" />
+  <xs:element name="ListEntityTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEntityTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListEntityTypesResult" nillable="true" type="tns:ListEntityTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListEntityTypesResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EntityTypes" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListEntityTypesResult" nillable="true" type="tns:ListEntityTypesResult" />
+  <xs:complexType name="UnexpectedErrorFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="UnexpectedErrorFault" nillable="true" type="tns:UnexpectedErrorFault" />
+  <xs:element name="DescribeEntityType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="globalEntityType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeEntityTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeEntityTypeResult" nillable="true" type="tns:DescribeEntityTypeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeEntityTypeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityTypes" nillable="true" type="tns:ArrayOfEntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeEntityTypeResult" nillable="true" type="tns:DescribeEntityTypeResult" />
+  <xs:complexType name="ArrayOfEntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityType" nillable="true" type="tns:EntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityType" nillable="true" type="tns:ArrayOfEntityType" />
+  <xs:complexType name="EntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityType" nillable="true" type="tns:EntityType" />
+  <xs:complexType name="InvalidTypeFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidTypeFault" nillable="true" type="tns:InvalidTypeFault" />
+  <xs:element name="DescribeEntity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityType" nillable="true" type="tns:EntityType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeEntityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeEntityResult" nillable="true" type="tns:DescribeEntityResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeEntityResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfDynamicEntityFieldDefinition" />
+      <xs:element minOccurs="0" name="IsCreateable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeletable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsQueryable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRetrievable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUpdateable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeEntityResult" nillable="true" type="tns:DescribeEntityResult" />
+  <xs:complexType name="ArrayOfDynamicEntityFieldDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicEntityFieldDefinition" nillable="true" type="tns:DynamicEntityFieldDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicEntityFieldDefinition" nillable="true" type="tns:ArrayOfDynamicEntityFieldDefinition" />
+  <xs:complexType name="DynamicEntityFieldDefinition">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EloquaNet" minOccurs="0" name="DataType" type="q2:DataType" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCustom" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsWriteable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicEntityFieldDefinition" nillable="true" type="tns:DynamicEntityFieldDefinition" />
+  <xs:element name="Create">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entities" nillable="true" type="tns:ArrayOfDynamicEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDynamicEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicEntity" nillable="true" type="tns:DynamicEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicEntity" nillable="true" type="tns:ArrayOfDynamicEntity" />
+  <xs:complexType name="DynamicEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="FieldValueCollection" nillable="true" type="tns:DynamicEntityFields" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicEntity" nillable="true" type="tns:DynamicEntity" />
+  <xs:complexType name="DynamicEntityFields">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityFields">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InternalName" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicEntityFields" nillable="true" type="tns:DynamicEntityFields" />
+  <xs:element name="CreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateResult" nillable="true" type="tns:ArrayOfCreateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCreateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CreateResult" nillable="true" type="tns:CreateResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCreateResult" nillable="true" type="tns:ArrayOfCreateResult" />
+  <xs:complexType name="CreateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateResult" nillable="true" type="tns:CreateResult" />
+  <xs:complexType name="ArrayOfError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="tns:Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfError" nillable="true" type="tns:ArrayOfError" />
+  <xs:complexType name="Error">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EloquaAPI.Data" minOccurs="0" name="ErrorCode" type="q3:ErrorCode" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:complexType name="BatchSizeExceededFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BatchSizeExceededFault" nillable="true" type="tns:BatchSizeExceededFault" />
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entities" nillable="true" type="tns:ArrayOfDynamicEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateResult" nillable="true" type="tns:ArrayOfUpdateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfUpdateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UpdateResult" nillable="true" type="tns:UpdateResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUpdateResult" nillable="true" type="tns:ArrayOfUpdateResult" />
+  <xs:complexType name="UpdateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateResult" nillable="true" type="tns:UpdateResult" />
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityType" nillable="true" type="tns:EntityType" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteResult" nillable="true" type="tns:ArrayOfDeleteResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDeleteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeleteResult" nillable="true" type="tns:DeleteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeleteResult" nillable="true" type="tns:ArrayOfDeleteResult" />
+  <xs:complexType name="DeleteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteResult" nillable="true" type="tns:DeleteResult" />
+  <xs:element name="Retrieve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityType" nillable="true" type="tns:EntityType" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q5:ArrayOfint" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fieldNames" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveResult" nillable="true" type="tns:ArrayOfDynamicEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Query">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eloquaType" nillable="true" type="tns:EntityType" />
+        <xs:element minOccurs="0" name="searchQuery" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fieldNames" nillable="true" type="q7:ArrayOfstring" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryResult" nillable="true" type="tns:DynamicEntityQueryResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DynamicEntityQueryResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Entities" nillable="true" type="tns:ArrayOfDynamicEntity" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicEntityQueryResults" nillable="true" type="tns:DynamicEntityQueryResults" />
+  <xs:complexType name="InvalidQueryFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidQueryFault" nillable="true" type="tns:InvalidQueryFault" />
+  <xs:complexType name="QueryTooLargeFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="QueryTooLargeFault" nillable="true" type="tns:QueryTooLargeFault" />
+  <xs:complexType name="OperationTimeIntervalFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="OperationTimeIntervalFault" nillable="true" type="tns:OperationTimeIntervalFault" />
+  <xs:element name="ListAssetTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAssetTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListAssetTypesResult" nillable="true" type="tns:ListAssetTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListAssetTypesResult">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AssetTypes" nillable="true" type="q8:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListAssetTypesResult" nillable="true" type="tns:ListAssetTypesResult" />
+  <xs:element name="DescribeAssetType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeAssetTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeAssetTypeResult" nillable="true" type="tns:DescribeAssetTypeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeAssetTypeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetTypes" nillable="true" type="tns:ArrayOfAssetType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeAssetTypeResult" nillable="true" type="tns:DescribeAssetTypeResult" />
+  <xs:complexType name="ArrayOfAssetType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetType" nillable="true" type="tns:AssetType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetType" nillable="true" type="tns:ArrayOfAssetType" />
+  <xs:complexType name="AssetType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssetType" nillable="true" type="tns:AssetType" />
+  <xs:element name="DescribeAsset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetType" nillable="true" type="tns:AssetType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeAssetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeAssetResult" nillable="true" type="tns:DescribeAssetResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfDynamicAssetFieldDefinition" />
+      <xs:element minOccurs="0" name="IsCreateable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeletable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsQueryable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRetrievable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUpdateable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeAssetResult" nillable="true" type="tns:DescribeAssetResult" />
+  <xs:complexType name="ArrayOfDynamicAssetFieldDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicAssetFieldDefinition" nillable="true" type="tns:DynamicAssetFieldDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicAssetFieldDefinition" nillable="true" type="tns:ArrayOfDynamicAssetFieldDefinition" />
+  <xs:complexType name="DynamicAssetFieldDefinition">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EloquaAPI" minOccurs="0" name="DataType" type="q9:AssetFieldDataType" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsWriteable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicAssetFieldDefinition" nillable="true" type="tns:DynamicAssetFieldDefinition" />
+  <xs:element name="CreateAsset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assets" nillable="true" type="tns:ArrayOfDynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDynamicAsset">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicAsset" nillable="true" type="tns:DynamicAsset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicAsset" nillable="true" type="tns:ArrayOfDynamicAsset" />
+  <xs:complexType name="DynamicAsset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetType" nillable="true" type="tns:AssetType" />
+      <xs:element minOccurs="0" name="FieldValueCollection" nillable="true" type="tns:DynamicAssetFields" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicAsset" nillable="true" type="tns:DynamicAsset" />
+  <xs:complexType name="DynamicAssetFields">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetFields">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InternalName" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicAssetFields" nillable="true" type="tns:DynamicAssetFields" />
+  <xs:element name="CreateAssetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAssetResult" nillable="true" type="tns:ArrayOfCreateAssetResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCreateAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CreateAssetResult" nillable="true" type="tns:CreateAssetResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCreateAssetResult" nillable="true" type="tns:ArrayOfCreateAssetResult" />
+  <xs:complexType name="CreateAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetType" nillable="true" type="tns:AssetType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAssetResult" nillable="true" type="tns:CreateAssetResult" />
+  <xs:element name="UpdateAsset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assets" nillable="true" type="tns:ArrayOfDynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAssetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAssetResult" nillable="true" type="tns:ArrayOfUpdateAssetResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfUpdateAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UpdateAssetResult" nillable="true" type="tns:UpdateAssetResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUpdateAssetResult" nillable="true" type="tns:ArrayOfUpdateAssetResult" />
+  <xs:complexType name="UpdateAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetType" nillable="true" type="tns:AssetType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateAssetResult" nillable="true" type="tns:UpdateAssetResult" />
+  <xs:element name="DeleteAsset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetType" nillable="true" type="tns:AssetType" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q10:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAssetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAssetResult" nillable="true" type="tns:ArrayOfDeleteAssetResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDeleteAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeleteAssetResult" nillable="true" type="tns:DeleteAssetResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeleteAssetResult" nillable="true" type="tns:ArrayOfDeleteAssetResult" />
+  <xs:complexType name="DeleteAssetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetType" nillable="true" type="tns:AssetType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteAssetResult" nillable="true" type="tns:DeleteAssetResult" />
+  <xs:element name="RetrieveAsset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assetType" nillable="true" type="tns:AssetType" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q11:ArrayOfint" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fieldNames" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveAssetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveAssetResult" nillable="true" type="tns:ArrayOfDynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListGroupMembership">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entity" nillable="true" type="tns:DynamicEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListGroupMembershipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListGroupMembershipResult" nillable="true" type="tns:ArrayOfDynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InvalidEntityFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidEntityFault" nillable="true" type="tns:InvalidEntityFault" />
+  <xs:element name="AddGroupMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entity" nillable="true" type="tns:DynamicEntity" />
+        <xs:element minOccurs="0" name="asset" nillable="true" type="tns:DynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGroupMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddGroupMemberResult" nillable="true" type="tns:GroupMemberResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GroupMemberResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfError" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupMemberResult" nillable="true" type="tns:GroupMemberResult" />
+  <xs:complexType name="InvalidAssetFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidAssetFault" nillable="true" type="tns:InvalidAssetFault" />
+  <xs:element name="RemoveGroupMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entity" nillable="true" type="tns:DynamicEntity" />
+        <xs:element minOccurs="0" name="asset" nillable="true" type="tns:DynamicAsset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGroupMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveGroupMemberResult" nillable="true" type="tns:GroupMemberResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListActivityTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListActivityTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListActivityTypesResult" nillable="true" type="tns:ListActivityTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ListActivityTypesResult">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ActivityTypes" nillable="true" type="q13:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListActivityTypesResult" nillable="true" type="tns:ListActivityTypesResult" />
+  <xs:element name="DescribeActivityType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeActivityTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeActivityTypeResult" nillable="true" type="tns:DescribeActivityTypeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeActivityTypeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityTypes" nillable="true" type="tns:ArrayOfEloquaActivityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeActivityTypeResult" nillable="true" type="tns:DescribeActivityTypeResult" />
+  <xs:complexType name="ArrayOfEloquaActivityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EloquaActivityType" nillable="true" type="tns:EloquaActivityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEloquaActivityType" nillable="true" type="tns:ArrayOfEloquaActivityType" />
+  <xs:complexType name="EloquaActivityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EloquaActivityType" nillable="true" type="tns:EloquaActivityType" />
+  <xs:element name="DescribeActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActivityType" nillable="true" type="tns:EloquaActivityType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescribeActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescribeActivityResult" nillable="true" type="tns:DescribeActivityResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DescribeActivityResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfDynamicActivityFieldDefinition" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EloquaAPI" minOccurs="0" name="RelatedAssetType" type="q14:EloquaAssetType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescribeActivityResult" nillable="true" type="tns:DescribeActivityResult" />
+  <xs:complexType name="ArrayOfDynamicActivityFieldDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicActivityFieldDefinition" nillable="true" type="tns:DynamicActivityFieldDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicActivityFieldDefinition" nillable="true" type="tns:ArrayOfDynamicActivityFieldDefinition" />
+  <xs:complexType name="DynamicActivityFieldDefinition">
+    <xs:sequence>
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EloquaAPI" minOccurs="0" name="DataType" type="q15:ActivityFieldDataType" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsWriteable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicActivityFieldDefinition" nillable="true" type="tns:DynamicActivityFieldDefinition" />
+  <xs:element name="GetActivities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dynamicEntity" nillable="true" type="tns:DynamicEntity" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" minOccurs="0" name="activityTypes" nillable="true" type="q16:ArrayOfActivityType" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetActivitiesResult" nillable="true" type="tns:ArrayOfDynamicActivity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDynamicActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DynamicActivity" nillable="true" type="tns:DynamicActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDynamicActivity" nillable="true" type="tns:ArrayOfDynamicActivity" />
+  <xs:complexType name="DynamicActivity">
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EloquaNet.Activity" minOccurs="0" name="ActivityType" type="q17:ActivityType" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DynamicAsset" nillable="true" type="tns:DynamicAsset" />
+      <xs:element minOccurs="0" name="DynamicEntity" nillable="true" type="tns:DynamicEntity" />
+      <xs:element minOccurs="0" name="FieldValueCollection" nillable="true" type="tns:DynamicActivityFields" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicActivity" nillable="true" type="tns:DynamicActivity" />
+  <xs:complexType name="DynamicActivityFields">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityFields">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InternalName" nillable="true" type="xs:string" />
+            <xs:element name="Value" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DynamicActivityFields" nillable="true" type="tns:DynamicActivityFields" />
+  <xs:complexType name="InvalidDateRangeFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidDateRangeFault" nillable="true" type="tns:InvalidDateRangeFault" />
+  <xs:element name="GetEmailActivitiesForRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailAddresses" nillable="true" type="q18:ArrayOfstring" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailIDs" nillable="true" type="q19:ArrayOfint" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="requestedPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailActivitiesForRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmailActivitiesForRecipientsResult" nillable="true" type="tns:ArrayOfDynamicActivity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InvalidArgumentFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="InvalidArgumentFault" nillable="true" type="tns:InvalidArgumentFault" />
+  <xs:element name="SendQuickEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="asset" nillable="true" type="tns:DynamicAsset" />
+        <xs:element minOccurs="0" name="entity" nillable="true" type="tns:DynamicEntity" />
+        <xs:element minOccurs="0" name="options" nillable="true" type="tns:QuickSendEmailOption" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="QuickSendEmailOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowResend" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendToBouncebacked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendToEmailGroupUnsubscribed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendToMasterExcluded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendToUnsubscribed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SenderId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuickSendEmailOption" nillable="true" type="tns:QuickSendEmailOption" />
+  <xs:element name="SendQuickEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendQuickEmailResult" nillable="true" type="tns:SendEmailResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SendEmailResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeploymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EloquaAPI" minOccurs="0" name="Status" type="q20:SendEmailStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailResult" nillable="true" type="tns:SendEmailResult" />
+  <xs:complexType name="RecordNotFoundFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RecordNotFoundFault" nillable="true" type="tns:RecordNotFoundFault" />
+  <xs:element name="GetQuickEmailStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deploymentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuickEmailStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetQuickEmailStatusResult" nillable="true" type="tns:SendEmailResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
