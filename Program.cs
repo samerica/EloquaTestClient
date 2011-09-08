@@ -49,7 +49,7 @@ namespace EloquaTestClient
             {
                 #region Setup the Eloqua service
 
-                var service = new EloquaInstance("instance", "userid", "password");
+                var service = new EloquaInstance("TestInstance", @"Webtrends\eloqua.api", "fyG9e1opgc!");
 
                 #endregion
 
