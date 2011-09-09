@@ -47,11 +47,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\EloquaProgramService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\EloquaServiceNew\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,16 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\EloquaProgramService\EloquaTestClient.EloquaProgramService.MailAddressStatus.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\EloquaProgramService\EloquaTestClient.EloquaProgramService.Member.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\EloquaProgramService\EloquaTestClient.EloquaProgramService.Step.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\EloquaProgramService\ExternalActionService.wsdl" />
     <None Include="Service References\EloquaServiceNew\Eloqua.wsdl" />
     <None Include="Service References\EloquaServiceNew\EloquaTestClient.EloquaServiceNew.CreateAssetResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -166,20 +151,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\EloquaProgramService\" />
     <WCFMetadataStorage Include="Service References\EloquaServiceNew\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\EloquaProgramService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\EloquaProgramService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\EloquaProgramService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EloquaServiceNew\configuration91.svcinfo" />

@@ -22,8 +22,8 @@ namespace EloquaTestClient
                 //var service = new EloquaInstance("TestInstance", "Webtrends\\eloqua.api", "fyG9e1opgc!");
 
                 EloquaServiceClient service = new EloquaServiceClient();
-                service.ClientCredentials.UserName.UserName = @"Webtrends\eloqua.api";
-                service.ClientCredentials.UserName.Password = "fyG9e1opgc!";
+                service.ClientCredentials.UserName.UserName = @"";
+                service.ClientCredentials.UserName.Password = "";
 
                 #endregion
 
